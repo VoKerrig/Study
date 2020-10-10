@@ -28,7 +28,7 @@ distances['Moscow']['Paris'] = Moscow_Paris
 distances['London'] = {}
 distances['London']['Paris'] = London_Paris
 print(distances)
-dfgdfg
+
 
 
 
