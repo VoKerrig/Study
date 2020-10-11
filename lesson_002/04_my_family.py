@@ -18,18 +18,13 @@ my_family_height = [
 print(my_family_height)
 # Выведите на консоль рост отца в формате
 #   Рост отца - ХХ см
-dad = my_family_height[1]
-height_dad = dad[1]
+height_dad = my_family_height[1][1]
 print('Рост отца - ', height_dad, 'см')
 # Выведите на консоль общий рост вашей семьи как сумму ростов всех членов
 #   Общий рост моей семьи - ХХ см
-mom = my_family_height[0]
-sister = my_family_height[2]
-brother = my_family_height[3]
-grandmother = my_family_height[4]
-height_mom = mom[1]
-height_sister = sister[1]
-height_brother = brother[1]
-height_grandmother = grandmother[1]
+height_mom = my_family_height[0][1]
+height_sister = my_family_height[2][1]
+height_brother = my_family_height[3][1]
+height_grandmother = my_family_height[4][1]
 family_height = height_dad + height_mom + height_sister + height_brother + height_grandmother
 print('Общий рост моей семьи - ', family_height, 'см')
