@@ -10,5 +10,15 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+year, month = 10, 1
+all_expenses = 0
+while year > month:
+    inflation = expenses
+    inflation *= .03
+    if month != 1:
+        expenses += inflation
+    all_expenses += expenses
+    month += 1
 
-# TODO здесь ваш код
+total = all_expenses - educational_grant * 10
+print(round(total))
