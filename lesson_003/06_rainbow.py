@@ -20,5 +20,17 @@ for i in range(0, 30, 5):
 # Нарисовать радугу дугами от окружности (cсм sd.circle) за нижним краем экрана,
 # поэкспериментировать с параметрами, что бы было красиво
 
+def rainbow(point, step):
+    color = -1
+    radius = 450
+    for _ in range(0, 30):
+        if color >= 6:
+            break
+        color += 1
+        radius += step
+        sd.circle(center_position=point, radius=radius, color=rainbow_colors[color], width=15)
+
+point = sd.get_point(420, 10)
+rainbow(point=point, step=15)
 
 sd.pause()
