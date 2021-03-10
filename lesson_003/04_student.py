@@ -19,6 +19,5 @@ while year > month:
         expenses += inflation
     all_expenses += expenses
     month += 1
-
 total = all_expenses - educational_grant * 10
-print(round(total))
+print('Студенту надо попросить', round(total), 'рублей')
