@@ -27,8 +27,64 @@ import simple_draw as sd
 # sd.line()
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
-# TODO здесь ваш код
 
+def triangle(point, angle, length):
+    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+    l1.draw()
+    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 150, length=length)
+    l2.draw()
+    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 270, length=length)
+    l3.draw()
+
+
+triangle(point = sd.get_point(100, 100), angle = 0, length = 100)
+
+
+def square(point, angle, length):
+    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+    l1.draw()
+    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 120, length=length)
+    l2.draw()
+    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 210, length=length)
+    l3.draw()
+    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 300, length=length)
+    l4.draw()
+
+
+square(point=sd.get_point(400, 100), angle=0, length=100)
+
+
+def pentagon(point, angle, length):
+    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+    l1.draw()
+    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 102, length=length)
+    l2.draw()
+    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 174, length=length)
+    l3.draw()
+    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 246, length=length)
+    l4.draw()
+    l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 318, length=length)
+    l5.draw()
+
+
+pentagon(point=sd.get_point(100, 400), angle=0, length=100)
+
+
+def hexagon(point, angle, length):
+    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+    l1.draw()
+    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 90, length=length)
+    l2.draw()
+    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 150, length=length)
+    l3.draw()
+    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 210, length=length)
+    l4.draw()
+    l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 270, length=length)
+    l5.draw()
+    l6 = sd.get_vector(start_point=l5.end_point, angle=angle + 330, length=length)
+    l6.draw()
+
+hexagon(point=sd.get_point(400, 400), angle=0, length=100)
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
