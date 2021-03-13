@@ -28,63 +28,65 @@ import simple_draw as sd
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
 
-def triangle(point, angle, length):
-    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
-    l1.draw()
-    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 150, length=length)
-    l2.draw()
-    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 270, length=length)
-    l3.draw()
+# def triangle(point, angle, length):
+#     l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+#     l1.draw()
+#     l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 150, length=length)
+#     l2.draw()
+#     l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 270, length=length)
+#     l3.draw()
+#
+#
+# triangle(point = sd.get_point(100, 100), angle = 0, length = 100)
+#
+#
+# def square(point, angle, length):
+#     l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+#     l1.draw()
+#     l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 120, length=length)
+#     l2.draw()
+#     l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 210, length=length)
+#     l3.draw()
+#     l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 300, length=length)
+#     l4.draw()
+#
+#
+# square(point=sd.get_point(400, 100), angle=0, length=100)
+#
+#
+# def pentagon(point, angle, length):
+#     l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+#     l1.draw()
+#     l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 102, length=length)
+#     l2.draw()
+#     l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 174, length=length)
+#     l3.draw()
+#     l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 246, length=length)
+#     l4.draw()
+#     l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 318, length=length)
+#     l5.draw()
+#
+#
+# pentagon(point=sd.get_point(100, 400), angle=0, length=100)
+#
+#
+# def hexagon(point, angle, length):
+#     l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
+#     l1.draw()
+#     l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 90, length=length)
+#     l2.draw()
+#     l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 150, length=length)
+#     l3.draw()
+#     l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 210, length=length)
+#     l4.draw()
+#     l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 270, length=length)
+#     l5.draw()
+#     l6 = sd.get_vector(start_point=l5.end_point, angle=angle + 330, length=length)
+#     l6.draw()
+#
+# hexagon(point=sd.get_point(400, 400), angle=0, length=100)
 
 
-triangle(point = sd.get_point(100, 100), angle = 0, length = 100)
-
-
-def square(point, angle, length):
-    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
-    l1.draw()
-    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 120, length=length)
-    l2.draw()
-    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 210, length=length)
-    l3.draw()
-    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 300, length=length)
-    l4.draw()
-
-
-square(point=sd.get_point(400, 100), angle=0, length=100)
-
-
-def pentagon(point, angle, length):
-    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
-    l1.draw()
-    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 102, length=length)
-    l2.draw()
-    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 174, length=length)
-    l3.draw()
-    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 246, length=length)
-    l4.draw()
-    l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 318, length=length)
-    l5.draw()
-
-
-pentagon(point=sd.get_point(100, 400), angle=0, length=100)
-
-
-def hexagon(point, angle, length):
-    l1 = sd.get_vector(start_point=point, angle=angle + 30, length=length)
-    l1.draw()
-    l2 = sd.get_vector(start_point=l1.end_point, angle=angle + 90, length=length)
-    l2.draw()
-    l3 = sd.get_vector(start_point=l2.end_point, angle=angle + 150, length=length)
-    l3.draw()
-    l4 = sd.get_vector(start_point=l3.end_point, angle=angle + 210, length=length)
-    l4.draw()
-    l5 = sd.get_vector(start_point=l4.end_point, angle=angle + 270, length=length)
-    l5.draw()
-    l6 = sd.get_vector(start_point=l5.end_point, angle=angle + 330, length=length)
-    l6.draw()
-
-hexagon(point=sd.get_point(400, 400), angle=0, length=100)
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
@@ -103,6 +105,55 @@ hexagon(point=sd.get_point(400, 400), angle=0, length=100)
 # Не забудте в этой общей функции придумать, как устранить разрыв
 #   в начальной/конечной точках рисуемой фигуры (если он есть)
 
+def vector_draw(point, angle, length):
+    vector = sd.get_vector(start_point=point, angle=angle, length=length)
+    vector.draw()
+    return vector
+
+
+def triangle(point=sd.get_point(100, 100), angle=30, length=100, any_angle=120):
+    last_point = point
+    for i in range(1, 4):
+        vector = vector_draw(last_point, angle, length)
+        last_point = vector.end_point
+        angle += any_angle
+
+
+triangle()
+
+
+
+def square(point=sd.get_point(400, 100), angle=30, length=100, any_angle=90):
+    last_point = point
+    for i in range(1, 5):
+        vector = vector_draw(last_point, angle, length)
+        last_point = vector.end_point
+        angle += any_angle
+
+
+square()
+
+
+def pentagon(point=sd.get_point(100, 400), angle=30, length=100, any_angle=72):
+    last_point = point
+    for i in range(1, 6):
+        vector = vector_draw(last_point, angle, length)
+        last_point = vector.end_point
+        angle += any_angle
+
+
+pentagon()
+
+
+def hexagon(point=sd.get_point(400, 400), angle=30, length=100, any_angle=60):
+    last_point = point
+    for i in range(1, 7):
+        vector = vector_draw(last_point, angle, length)
+        last_point = vector.end_point
+        angle += any_angle
+
+
+hexagon()
 # Часть 2-бис.
 # А теперь - сколько надо работы что бы внести изменения в код? Выгода на лицо :)
 # Поэтому среди программистов есть принцип D.R.Y. https://clck.ru/GEsA9
