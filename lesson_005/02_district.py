@@ -12,8 +12,6 @@ from district.central_street.house2 import room1 as cs2_1, room2 as cs2_2
 from district.soviet_street.house1 import room1 as ss1_1, room2 as ss1_2
 from district.soviet_street.house2 import room1 as ss2_1, room2 as ss2_2
 
-x = ","
-
 district = ",".join(cs1_1.folks), ",".join(cs1_2.folks), ",".join(cs2_1.folks), ",".join(cs2_2.folks),\
            ",".join(ss1_1.folks), ",".join(ss1_2.folks), ",".join(ss2_1.folks), ",".join(ss2_2.folks)
 
