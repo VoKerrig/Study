@@ -15,4 +15,7 @@
 # Создать рецепт своего бургера, по вашему вкусу.
 # Если не хватает инградиентов - создать соответствующие функции в модуле my_burger
 
-# TODO здесь ваш код
+from my_burger import bun, cutlet, cucumber, tomato, mayonnaise, cheese
+
+
+print(bun(), cucumber(), tomato(), cheese(), cutlet(), mayonnaise(), cheese(), cutlet(), bun())
