@@ -43,4 +43,33 @@
 # Это пример применения SOLID принципа (см https://goo.gl/GFMoaI) в архитектуре программ.
 # Точнее, в этом случае важен принцип единственной ответственности - https://goo.gl/rYb3hT
 
-# TODO здесь ваш код...
+from mastermind_engine import get_all_answers, get_one_answers, input_number, check, del_bad_answers
+
+
+print('Игра Быки и коровы')
+answers = get_all_answers()
+enemy = get_one_answers(answers)
+player = input_number()
+
+while True:
+    print("=" * 15, "Ход игрока", "=" * 15)
+    print("Угадайте число компьютера")
+    number = input_number()
+    bulls, cows = check(number, enemy)
+    print("Быки: ", bulls, "Коровы: ", cows)
+    if bulls == 4:
+        print("Победил игрок")
+        print("Компьютер загадал число: ", enemy)
+        break
+
+    print("=" * 15, "Ход компьютера", "=" * 15)
+    enemy_try = get_one_answers(answers)
+    print("Компьютер считает, что вы загадали число", enemy_try)
+    bulls, cows = check(enemy_try, player)
+    print("Быки: ", bulls, "Коровы: ", cows)
+    if bulls == 4:
+        print("Победил компьютер")
+        print("Компьютер загадал число: ", enemy)
+        break
+    else:
+        answers = del_bad_answers(answers, enemy_try, bulls, cows)
